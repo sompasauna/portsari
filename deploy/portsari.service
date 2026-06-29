@@ -1,0 +1,16 @@
+[Unit]
+Description=Portsari Yale L3 Door Bot
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=portsari
+Group=portsari
+ExecStart=/usr/local/bin/portsari --config /etc/portsari/config.yaml
+Restart=always
+RestartSec=5
+WorkingDirectory=/var/lib/portsari
+
+[Install]
+WantedBy=multi-user.target

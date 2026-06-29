@@ -1,0 +1,36 @@
+mqtt:
+  broker: "192.168.1.201:1883"
+  client_id: "portsari"
+  username: "portsari"
+  password: "..."
+  state_topic_prefix: "ha/varasto"
+  qos: 1
+
+ha_api:
+  base_url: "http://192.168.1.201:8123"
+  token: "..."
+  entity_id: "lock.la0010g"
+
+telegram:
+  token: "..."
+
+lock:
+  entity_slug: "la0010g"
+  command_confirm_timeout_seconds: 5
+
+access:
+  timezone: ""
+  daytime_start: "08:00"
+  daytime_end: "22:00"
+  bootstrap_admin_telegram_id: 270533671
+
+database:
+  path: "/var/lib/portsari/portsari.db"
+
+alerts:
+  battery_low_threshold: 20
+  battery_critical_threshold: 10
+
+rate_limit:
+  unlock_max: 5
+  unlock_window_minutes: 10
